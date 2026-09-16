@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "hey-ollama.helloWorld",
-        "title": "Hello World"
+        "command": "hey-ollama.ask",
+        "title": "hey ollama: ask local ai"
       }
     ]
   },
