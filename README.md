@@ -1,71 +1,65 @@
-# hey-ollama README
+# hey-ollama | local code agent
 
-This is the README for your extension "hey-ollama". After writing up a brief description, we recommend including the following sections.
+a local ai coding agent for vs code, powered by ollama
 
-## Features
+## current status
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+this project is in early development. the first goal is to connect a locally running coding model to a custom vs code extension.
 
-For example if there is an image subfolder under your extension project workspace:
+## planned features
 
-\!\[feature X\]\(images/feature-x.png\)
+- chat with a local ai model
+- read the active file
+- search project files
+- explain and refactor code
+- create and edit files
+- run tests
+- inspect errors
+- request approval before making changes
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## requirements
 
-## Requirements
+- vs code
+- node.js
+- git
+- ollama
+- a compatible local coding model
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## local setup
 
-## Extension Settings
+install ollama from:
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+https://ollama.com/download/windows
 
-For example:
+download a coding model:
 
-This extension contributes the following settings:
+ollama pull qwen2.5-coder:7b
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+run the model:
 
-## Known Issues
+ollama run qwen2.5-coder:7b
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+clone this repository:
 
-## Release Notes
+git clone https://github.com/yourusername/local-code-agent.git
+cd local-code-agent
 
-Users appreciate release notes as you update your extension.
+install the project dependencies:
 
-### 1.0.0
+npm install
 
-Initial release of ...
+compile the extension:
 
-### 1.0.1
+npm run compile
 
-Fixed issue #.
+press f5 in vs code to open the extension development host.
 
-### 1.1.0
+## privacy
 
-Added features X, Y, and Z.
+the model is intended to run locally through ollama. project files should not be sent to an external ai provider unless additional integrations are added in the future.
 
----
+never commit api keys, passwords, private project files, environment variables, or downloaded model files.
 
-## Following extension guidelines
+### project goals
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+this project is being built as a customisable local alternative for ai-assisted software development inside vs code
