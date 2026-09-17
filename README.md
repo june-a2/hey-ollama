@@ -41,7 +41,7 @@ ollama run qwen2.5-coder:7b
 
 clone this repository:
 
-git clone https://github.com/yourusername/local-code-agent.git
+git clone https://github.com/june-a2/hey-ollama.git
 cd local-code-agent
 
 install the project dependencies:

@@ -38,7 +38,7 @@ export function activate(context: vscode.ExtensionContext) {
                 "content-type": "application/json",
               },
               body: JSON.stringify({
-                model: "qwen2.5-coder:7b",
+                model: "qwen2.5-coder:14b",
                 stream: false,
                 messages: [
                   {
